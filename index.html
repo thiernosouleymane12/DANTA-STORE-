@@ -1,3 +1,6 @@
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,7 +15,7 @@
    NDANTA STORE – Style Principal
    Couleurs : Bleu marine, Blanc, Noir, Or accent
    ============================================ */
-
+ 
 :root {
   --navy: #0A1628;
   --navy-mid: #0f2040;
@@ -32,23 +35,23 @@
   --shadow-md: 0 8px 40px rgba(10,22,40,0.16);
   --transition: 0.3s cubic-bezier(.4,0,.2,1);
 }
-
+ 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
 html { scroll-behavior: smooth; }
-
+ 
 body {
   font-family: var(--font-body);
   background: var(--white);
   color: var(--navy);
   overflow-x: hidden;
 }
-
+ 
 /* ---- SCROLLBAR ---- */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--gray-light); }
 ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
-
+ 
 /* ============ NAVBAR ============ */
 #mainNav {
   background: rgba(10,22,40,0.97);
@@ -59,7 +62,7 @@ body {
   z-index: 1050;
 }
 #mainNav.scrolled { padding: 8px 0; box-shadow: var(--shadow-md); }
-
+ 
 .logo-icon {
   width: 40px; height: 40px;
   background: linear-gradient(135deg, var(--blue), var(--gold));
@@ -68,7 +71,7 @@ body {
   font-size: 18px; color: white; flex-shrink: 0;
 }
 .logo-icon.small { width: 32px; height: 32px; font-size: 14px; border-radius: 8px; }
-
+ 
 .brand-name {
   font-family: var(--font-head);
   font-weight: 800; font-size: 18px;
@@ -80,7 +83,7 @@ body {
   color: var(--gold); letter-spacing: 4px;
   display: block; line-height: 1;
 }
-
+ 
 .nav-link {
   color: rgba(255,255,255,0.8) !important;
   font-size: 14px; font-weight: 500;
@@ -90,7 +93,7 @@ body {
   font-family: var(--font-body);
 }
 .nav-link:hover { color: white !important; background: rgba(255,255,255,0.1); }
-
+ 
 .search-mini {
   background: rgba(255,255,255,0.1);
   border-radius: 50px; padding: 6px 16px;
@@ -104,7 +107,7 @@ body {
 }
 .search-mini input::placeholder { color: rgba(255,255,255,0.5); }
 .search-mini i { color: rgba(255,255,255,0.5); font-size: 13px; }
-
+ 
 .btn-whatsapp {
   background: var(--whatsapp);
   color: white !important; border: none;
@@ -114,7 +117,7 @@ body {
   transition: var(--transition);
 }
 .btn-whatsapp:hover { background: var(--whatsapp-dark); transform: translateY(-1px); }
-
+ 
 .btn-cart {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.2);
@@ -123,7 +126,7 @@ body {
   font-size: 15px; transition: var(--transition);
 }
 .btn-cart:hover { background: var(--blue); border-color: var(--blue); }
-
+ 
 .cart-badge {
   position: absolute;
   top: -4px; right: -4px;
@@ -132,7 +135,7 @@ body {
   font-size: 10px; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
 }
-
+ 
 /* ============ HERO ============ */
 .hero-section {
   position: relative; min-height: 100vh;
@@ -140,14 +143,14 @@ body {
   display: flex; align-items: center; justify-content: center;
   overflow: hidden; padding: 100px 0 60px;
 }
-
+ 
 #heroCanvas {
   position: absolute; top: 0; left: 0;
   width: 100%; height: 100%; pointer-events: none;
 }
-
+ 
 .hero-content { position: relative; z-index: 2; }
-
+ 
 .hero-badge {
   display: inline-block;
   background: rgba(245,166,35,0.15);
@@ -157,7 +160,7 @@ body {
   font-family: var(--font-body); letter-spacing: 0.5px;
   animation: fadeInDown 0.8s ease;
 }
-
+ 
 .hero-title {
   font-family: var(--font-head);
   font-size: clamp(2.8rem, 7vw, 5rem);
@@ -170,13 +173,13 @@ body {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
+ 
 .hero-sub {
   color: rgba(255,255,255,0.65); font-size: 1.1rem;
   margin-top: 16px; letter-spacing: 0.5px;
   animation: fadeInUp 1s ease 0.2s both;
 }
-
+ 
 .btn-primary-custom {
   background: linear-gradient(135deg, var(--blue), var(--blue-light));
   color: white !important; border: none;
@@ -189,7 +192,7 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(30,95,216,0.5);
 }
-
+ 
 .btn-whatsapp-hero {
   background: rgba(37,211,102,0.15);
   color: var(--whatsapp) !important; border: 2px solid var(--whatsapp);
@@ -197,7 +200,7 @@ body {
   font-weight: 600; text-decoration: none; transition: var(--transition);
 }
 .btn-whatsapp-hero:hover { background: var(--whatsapp); color: white !important; transform: translateY(-3px); }
-
+ 
 .hero-stats {
   display: flex; align-items: center; justify-content: center;
   gap: 40px; flex-wrap: wrap;
@@ -211,19 +214,19 @@ body {
 .stat-plus { color: var(--gold); font-size: 1.5rem; font-weight: 700; }
 .stat-label { color: rgba(255,255,255,0.5); font-size: 13px; margin-top: 4px; }
 .stat-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.15); }
-
+ 
 .hero-scroll {
   position: absolute; bottom: 30px; left: 50%;
   transform: translateX(-50%);
   color: rgba(255,255,255,0.4); font-size: 20px;
   animation: bounce 2s infinite;
 }
-
+ 
 /* ============ SECTIONS ============ */
 .section-pad { padding: 80px 0; }
-
+ 
 .bg-light-custom { background: #f4f7fc; }
-
+ 
 .section-eyebrow {
   color: var(--blue); font-size: 13px; font-weight: 600;
   letter-spacing: 2px; text-transform: uppercase;
@@ -235,7 +238,7 @@ body {
   font-weight: 800; color: var(--navy); letter-spacing: -0.5px;
 }
 .section-sub { color: var(--gray-text); font-size: 16px; margin-top: 8px; }
-
+ 
 /* ============ CATEGORIES ============ */
 .cat-card {
   background: white; border-radius: var(--radius);
@@ -255,7 +258,7 @@ body {
 .cat-all { background: linear-gradient(135deg, var(--blue), var(--blue-light)); border-color: transparent !important; }
 .cat-all .cat-name, .cat-all .cat-count { color: white !important; }
 .cat-all:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(30,95,216,0.35); }
-
+ 
 /* ============ PROMO BANNER ============ */
 .promo-banner {
   background: linear-gradient(90deg, var(--gold), #ffb733, var(--gold));
@@ -274,7 +277,7 @@ body {
   font-weight: 600; font-size: 14px; color: var(--navy);
   font-family: var(--font-body);
 }
-
+ 
 /* ============ FILTER BAR ============ */
 .filter-bar {
   display: flex; gap: 12px; align-items: center;
@@ -307,7 +310,7 @@ body {
   color: var(--gray-text); transition: var(--transition);
 }
 .view-btn.active { background: var(--blue); border-color: var(--blue); color: white; }
-
+ 
 /* ============ PRODUCT TABS ============ */
 .product-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
 .tab-btn {
@@ -318,7 +321,7 @@ body {
   color: var(--gray-text);
 }
 .tab-btn.active { background: var(--blue); border-color: var(--blue); color: white; }
-
+ 
 /* ============ PRODUCT CARDS ============ */
 .product-card {
   background: white; border-radius: var(--radius);
@@ -340,7 +343,7 @@ body {
   padding: 12px; transition: transform 0.5s ease;
 }
 .product-card:hover .product-img-wrap img { transform: scale(1.08); }
-
+ 
 .product-badge {
   position: absolute; top: 12px; left: 12px;
   background: var(--gold); color: var(--navy);
@@ -349,7 +352,7 @@ body {
 }
 .product-badge.new { background: var(--blue); color: white; }
 .product-badge.promo { background: #e74c3c; color: white; }
-
+ 
 .product-wish {
   position: absolute; top: 12px; right: 12px;
   width: 32px; height: 32px; border-radius: 50%;
@@ -359,21 +362,21 @@ body {
   transition: var(--transition);
 }
 .product-wish:hover { transform: scale(1.2); }
-
+ 
 .product-info { padding: 16px; }
 .product-cat { font-size: 11px; color: var(--blue); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
 .product-name { font-family: var(--font-head); font-weight: 700; font-size: 15px; color: var(--navy); margin-bottom: 6px; line-height: 1.3; }
 .product-desc { font-size: 12px; color: var(--gray-text); margin-bottom: 10px; line-height: 1.5; }
 .product-price { font-family: var(--font-head); font-size: 17px; font-weight: 800; color: var(--blue); }
 .product-old-price { font-size: 12px; color: var(--gray-text); text-decoration: line-through; margin-left: 6px; }
-
+ 
 .product-avail {
   font-size: 11px; font-weight: 600; margin-bottom: 12px;
   display: flex; align-items: center; gap: 4px;
 }
 .avail-in { color: #27ae60; }
 .avail-out { color: #e74c3c; }
-
+ 
 .product-actions { display: flex; gap: 8px; }
 .btn-buy {
   flex: 1; background: linear-gradient(135deg, var(--blue), var(--blue-light));
@@ -390,14 +393,14 @@ body {
   color: var(--navy);
 }
 .btn-cart-add:hover { border-color: var(--blue); color: var(--blue); background: rgba(30,95,216,0.08); }
-
+ 
 .btn-load-more {
   background: none; border: 2px solid var(--blue);
   color: var(--blue); border-radius: 50px; padding: 12px 36px;
   font-weight: 600; transition: var(--transition); font-family: var(--font-body);
 }
 .btn-load-more:hover { background: var(--blue); color: white; }
-
+ 
 /* ============ WHY SECTION ============ */
 .why-section { background: linear-gradient(135deg, var(--navy), var(--navy-mid)); }
 .why-card {
@@ -419,7 +422,7 @@ body {
 }
 .why-card h5 { color: white; font-family: var(--font-head); font-weight: 700; margin-bottom: 8px; }
 .why-card p { color: rgba(255,255,255,0.6); font-size: 14px; }
-
+ 
 /* ============ TESTIMONIALS ============ */
 .testimonial-card {
   background: white; border-radius: var(--radius);
@@ -444,7 +447,7 @@ body {
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-head);
 }
-
+ 
 /* ============ CONTACT ============ */
 .contact-section { background: linear-gradient(135deg, #0d1f3c, var(--navy)); }
 .contact-info { display: flex; flex-direction: column; gap: 16px; }
@@ -464,7 +467,7 @@ body {
 }
 .contact-item strong { font-family: var(--font-head); font-size: 14px; display: block; }
 .contact-item span { font-size: 13px; color: rgba(255,255,255,0.7); }
-
+ 
 .social-links { display: flex; gap: 10px; }
 .social-btn {
   width: 42px; height: 42px; border-radius: 50%;
@@ -476,7 +479,7 @@ body {
 .social-btn.ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 .social-btn.tk { background: #000; border: 1px solid #333; }
 .social-btn.yt { background: #FF0000; }
-
+ 
 .contact-form-card {
   background: white; border-radius: var(--radius);
   padding: 32px; box-shadow: var(--shadow-md);
@@ -490,7 +493,7 @@ body {
 }
 .form-control-custom:focus { border-color: var(--blue); background: white; }
 textarea.form-control-custom { resize: vertical; }
-
+ 
 /* ============ FOOTER ============ */
 .main-footer { background: #060e1c; color: rgba(255,255,255,0.7); }
 .footer-heading { color: white; font-family: var(--font-head); font-weight: 700; font-size: 14px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
@@ -515,7 +518,7 @@ textarea.form-control-custom { resize: vertical; }
 .footer-legal { display: flex; gap: 20px; flex-wrap: wrap; }
 .footer-legal a { color: rgba(255,255,255,0.4); font-size: 12px; text-decoration: none; }
 .footer-legal a:hover { color: var(--gold); }
-
+ 
 /* ============ CART SIDEBAR ============ */
 .cart-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.5);
@@ -552,7 +555,7 @@ textarea.form-control-custom { resize: vertical; }
 .cart-footer { padding: 16px 24px; border-top: 1px solid var(--gray-mid); }
 .cart-total { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; font-size: 18px; }
 .cart-total strong { color: var(--blue); font-family: var(--font-head); font-size: 20px; }
-
+ 
 /* ============ PRODUCT MODAL ============ */
 .product-modal { border: none; border-radius: 20px; overflow: hidden; }
 .modal-close-btn {
@@ -585,7 +588,7 @@ textarea.form-control-custom { resize: vertical; }
 }
 .qty-control button:hover { border-color: var(--blue); color: var(--blue); }
 .qty-control span { font-family: var(--font-head); font-size: 18px; font-weight: 700; min-width: 24px; text-align: center; }
-
+ 
 /* ============ ADMIN PANEL ============ */
 .admin-panel { border: none; border-radius: 20px; overflow: hidden; }
 .admin-header {
@@ -630,7 +633,7 @@ textarea.form-control-custom { resize: vertical; }
 .badge-status.orange { background: rgba(245,166,35,0.15); color: #d97706; }
 .badge-status.blue { background: rgba(30,95,216,0.15); color: var(--blue); }
 .add-form { background: var(--gray-light); padding: 20px; border-radius: 12px; }
-
+ 
 /* ============ ADMIN FAB ============ */
 .admin-fab {
   position: fixed; bottom: 30px; left: 30px;
@@ -641,7 +644,7 @@ textarea.form-control-custom { resize: vertical; }
   transition: var(--transition); z-index: 100;
 }
 .admin-fab:hover { background: var(--blue); color: white; transform: scale(1.1); }
-
+ 
 /* ============ TOAST ============ */
 .toast-container { position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
 .toast-msg {
@@ -653,7 +656,7 @@ textarea.form-control-custom { resize: vertical; }
 }
 .toast-msg.success { border-left-color: #27ae60; }
 .toast-msg.error { border-left-color: #e74c3c; }
-
+ 
 /* ============ ANIMATIONS ============ */
 @keyframes fadeInDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
 @keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
@@ -661,9 +664,9 @@ textarea.form-control-custom { resize: vertical; }
 @keyframes ticker { from { transform:translateX(0); } to { transform:translateX(-50%); } }
 @keyframes slideInRight { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:translateX(0); } }
 @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-
+ 
 .fade-in { animation: fadeIn 0.6s ease both; }
-
+ 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 768px) {
   .hero-title { font-size: 2.5rem; }
@@ -675,15 +678,15 @@ textarea.form-control-custom { resize: vertical; }
   .admin-tabs { overflow-x: auto; flex-wrap: nowrap; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
-
+ 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
-
+ 
   </style>
 </head>
 <body>
-
+ 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
   <div class="container">
@@ -711,7 +714,7 @@ textarea.form-control-custom { resize: vertical; }
           <input type="text" placeholder="Rechercher..." id="navSearch" />
           <i class="fas fa-search"></i>
         </div>
-        <a href="https:--font-body224629823285" class="btn btn-whatsapp" target="_blank">
+        <a href="https://wa.me/224629823285" class="btn btn-whatsapp" target="_blank">
           <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
         <button class="btn btn-cart position-relative" onclick="toggleCart()">
@@ -722,7 +725,7 @@ textarea.form-control-custom { resize: vertical; }
     </div>
   </div>
 </nav>
-
+ 
 <!-- HERO -->
 <section id="accueil" class="hero-section">
   <canvas id="heroCanvas"></canvas>
@@ -748,7 +751,7 @@ textarea.form-control-custom { resize: vertical; }
   </div>
   <div class="hero-scroll"><i class="fas fa-chevron-down"></i></div>
 </section>
-
+ 
 <!-- CATEGORIES -->
 <section id="categories" class="section-pad bg-light-custom">
   <div class="container">
@@ -817,7 +820,7 @@ textarea.form-control-custom { resize: vertical; }
     </div>
   </div>
 </section>
-
+ 
 <!-- PROMOTIONS BANNER -->
 <section id="promos" class="promo-banner">
   <div class="container">
@@ -834,7 +837,7 @@ textarea.form-control-custom { resize: vertical; }
     </div>
   </div>
 </section>
-
+ 
 <!-- PRODUITS -->
 <section id="produits" class="section-pad">
   <div class="container">
@@ -842,7 +845,7 @@ textarea.form-control-custom { resize: vertical; }
       <div class="section-eyebrow">Catalogue</div>
       <h2 class="section-title">Nos Produits</h2>
     </div>
-
+ 
     <!-- Search & Filters -->
     <div class="filter-bar mb-4">
       <div class="search-bar-main">
@@ -873,7 +876,7 @@ textarea.form-control-custom { resize: vertical; }
         </div>
       </div>
     </div>
-
+ 
     <!-- Tabs -->
     <div class="product-tabs mb-4">
       <button class="tab-btn active" onclick="setTab('all', this)">Tous</button>
@@ -881,7 +884,7 @@ textarea.form-control-custom { resize: vertical; }
       <button class="tab-btn" onclick="setTab('new', this)">✨ Nouveautés</button>
       <button class="tab-btn" onclick="setTab('popular', this)">⭐ Populaires</button>
     </div>
-
+ 
     <div class="row g-4" id="productsGrid"></div>
     <div class="text-center mt-4">
       <button class="btn btn-load-more" id="loadMoreBtn" onclick="loadMore()">
@@ -890,7 +893,7 @@ textarea.form-control-custom { resize: vertical; }
     </div>
   </div>
 </section>
-
+ 
 <!-- POURQUOI NDANTA -->
 <section id="pourquoi" class="section-pad why-section">
   <div class="container">
@@ -944,7 +947,7 @@ textarea.form-control-custom { resize: vertical; }
     </div>
   </div>
 </section>
-
+ 
 <!-- TEMOIGNAGES -->
 <section class="section-pad bg-light-custom" id="temoignages">
   <div class="container">
@@ -986,7 +989,7 @@ textarea.form-control-custom { resize: vertical; }
     </div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact" class="section-pad contact-section">
   <div class="container">
@@ -1048,7 +1051,7 @@ textarea.form-control-custom { resize: vertical; }
     </div>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer class="main-footer">
   <div class="container">
@@ -1113,7 +1116,7 @@ textarea.form-control-custom { resize: vertical; }
     </div>
   </div>
 </footer>
-
+ 
 <!-- CART SIDEBAR -->
 <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
 <div class="cart-sidebar" id="cartSidebar">
@@ -1126,13 +1129,13 @@ textarea.form-control-custom { resize: vertical; }
   </div>
   <div class="cart-footer" id="cartFooter" style="display:none">
     <div class="cart-total"><span>Total</span><strong id="cartTotal">0 GNF</strong></div>
-    <a href="https://wa.me/224000000000" class="btn btn-whatsapp w-100 mb-2" target="_blank" id="cartWhatsapp">
+    <a href="https://wa.me/224629823285" class="btn btn-whatsapp w-100 mb-2" target="_blank" id="cartWhatsapp">
       <i class="fab fa-whatsapp me-2"></i>Commander via WhatsApp
     </a>
     <button class="btn btn-outline-secondary w-100 btn-sm" onclick="clearCart()">Vider le panier</button>
   </div>
 </div>
-
+ 
 <!-- PRODUCT MODAL -->
 <div class="modal fade" id="productModal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -1174,7 +1177,7 @@ textarea.form-control-custom { resize: vertical; }
     </div>
   </div>
 </div>
-
+ 
 <!-- ADMIN PANEL -->
 <div class="modal fade" id="adminModal" tabindex="-1">
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -1268,21 +1271,21 @@ textarea.form-control-custom { resize: vertical; }
     </div>
   </div>
 </div>
-
+ 
 <!-- Admin Trigger -->
 <button class="admin-fab" onclick="openAdmin()" title="Administration">
   <i class="fas fa-lock"></i>
 </button>
-
+ 
 <!-- Toast -->
 <div class="toast-container" id="toastContainer"></div>
-
+ 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
 /* ============================================
    NDANTA STORE – Application JavaScript
    ============================================ */
-
+ 
 // =========== PRODUCT DATA ===========
 const PRODUCTS = [
   // Téléphones
@@ -1309,7 +1312,7 @@ const PRODUCTS = [
   // Divers
   { id: 16, name: "Générateur 3500W Inverter", cat: "misc", catLabel: "🛒 Divers", price: 18000000, oldPrice: null, desc: "Silencieux, Économique, Démarrage automatique, 4 prises", img: "https://placehold.co/400x400/27ae60/FFFFFF?text=Generateur+3500W", available: true, badge: null, popular: true, isNew: false },
 ];
-
+ 
 // =========== STATE ===========
 let cart = JSON.parse(localStorage.getItem('ndanta_cart') || '[]');
 let currentFilter = 'all';
@@ -1318,7 +1321,7 @@ let currentView = 'grid';
 let visibleCount = 8;
 let currentModalProduct = null;
 let currentQty = 1;
-
+ 
 // =========== INIT ===========
 document.addEventListener('DOMContentLoaded', () => {
   initCanvas();
@@ -1327,25 +1330,25 @@ document.addEventListener('DOMContentLoaded', () => {
   animateStats();
   initScrollNav();
   populateAdminTable();
-
+ 
   // Nav search
   document.getElementById('navSearch').addEventListener('input', e => {
     document.getElementById('searchInput').value = e.target.value;
     searchProducts();
   });
 });
-
+ 
 // =========== CANVAS PARTICLES ===========
 function initCanvas() {
   const canvas = document.getElementById('heroCanvas');
   const ctx = canvas.getContext('2d');
   let w, h, particles;
-
+ 
   function resize() {
     w = canvas.width = canvas.offsetWidth;
     h = canvas.height = canvas.offsetHeight;
   }
-
+ 
   function createParticles() {
     particles = Array.from({ length: 60 }, () => ({
       x: Math.random() * w, y: Math.random() * h,
@@ -1355,7 +1358,7 @@ function initCanvas() {
       alpha: Math.random() * 0.5 + 0.1,
     }));
   }
-
+ 
   function drawParticles() {
     ctx.clearRect(0, 0, w, h);
     particles.forEach(p => {
@@ -1367,7 +1370,7 @@ function initCanvas() {
       if (p.x < 0 || p.x > w) p.dx *= -1;
       if (p.y < 0 || p.y > h) p.dy *= -1;
     });
-
+ 
     // Draw connections
     particles.forEach((a, i) => {
       particles.slice(i + 1).forEach(b => {
@@ -1382,11 +1385,11 @@ function initCanvas() {
     });
     requestAnimationFrame(drawParticles);
   }
-
+ 
   resize(); createParticles(); drawParticles();
   window.addEventListener('resize', () => { resize(); createParticles(); });
 }
-
+ 
 // =========== STATS COUNTER ===========
 function animateStats() {
   const observer = new IntersectionObserver(entries => {
@@ -1409,7 +1412,7 @@ function animateStats() {
   const heroStats = document.querySelector('.hero-stats');
   if (heroStats) observer.observe(heroStats);
 }
-
+ 
 // =========== SCROLL NAV ===========
 function initScrollNav() {
   const nav = document.getElementById('mainNav');
@@ -1417,40 +1420,40 @@ function initScrollNav() {
     nav.classList.toggle('scrolled', window.scrollY > 80);
   });
 }
-
+ 
 // =========== PRODUCTS ===========
 function getFilteredProducts() {
   let list = [...PRODUCTS];
   const search = document.getElementById('searchInput')?.value.toLowerCase() || '';
   const catFilter = document.getElementById('catFilter')?.value || 'all';
   const sortFilter = document.getElementById('sortFilter')?.value || 'default';
-
+ 
   if (currentFilter !== 'all') list = list.filter(p => p.cat === currentFilter);
   if (catFilter !== 'all') list = list.filter(p => p.cat === catFilter);
   if (search) list = list.filter(p => p.name.toLowerCase().includes(search) || p.desc.toLowerCase().includes(search));
   if (currentTab === 'promo') list = list.filter(p => p.badge === 'promo');
   if (currentTab === 'new') list = list.filter(p => p.isNew);
   if (currentTab === 'popular') list = list.filter(p => p.popular);
-
+ 
   if (sortFilter === 'price-asc') list.sort((a, b) => a.price - b.price);
   else if (sortFilter === 'price-desc') list.sort((a, b) => b.price - a.price);
   else if (sortFilter === 'popular') list.sort((a, b) => b.popular - a.popular);
   else if (sortFilter === 'new') list.sort((a, b) => b.isNew - a.isNew);
-
+ 
   return list;
 }
-
+ 
 function renderProducts() {
   const grid = document.getElementById('productsGrid');
   const list = getFilteredProducts().slice(0, visibleCount);
   const allCount = getFilteredProducts().length;
   document.getElementById('loadMoreBtn').style.display = allCount > visibleCount ? 'inline-flex' : 'none';
-
+ 
   if (list.length === 0) {
     grid.innerHTML = `<div class="col-12 text-center py-5 text-muted"><i class="fas fa-search fa-3x mb-3 d-block" style="opacity:0.3"></i><p>Aucun produit trouvé. Essayez une autre recherche.</p></div>`;
     return;
   }
-
+ 
   const colClass = currentView === 'grid' ? 'col-6 col-md-4 col-lg-3' : 'col-12 col-md-6';
   grid.innerHTML = list.map((p, i) => `
     <div class="${colClass} fade-in" style="animation-delay:${i * 0.05}s">
@@ -1486,19 +1489,19 @@ function renderProducts() {
     </div>
   `).join('');
 }
-
+ 
 function formatPrice(n) {
   return n.toLocaleString('fr-FR') + ' GNF';
 }
-
+ 
 function loadMore() {
   visibleCount += 8;
   renderProducts();
 }
-
+ 
 function searchProducts() { visibleCount = 8; renderProducts(); }
 function applyFilters() { visibleCount = 8; renderProducts(); }
-
+ 
 function filterCategory(cat) {
   currentFilter = cat;
   document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
@@ -1508,7 +1511,7 @@ function filterCategory(cat) {
   renderProducts();
   document.getElementById('produits').scrollIntoView({ behavior: 'smooth' });
 }
-
+ 
 function setTab(tab, el) {
   currentTab = tab;
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -1516,14 +1519,14 @@ function setTab(tab, el) {
   visibleCount = 8;
   renderProducts();
 }
-
+ 
 function setView(v) {
   currentView = v;
   document.getElementById('gridBtn').classList.toggle('active', v === 'grid');
   document.getElementById('listBtn').classList.toggle('active', v === 'list');
   renderProducts();
 }
-
+ 
 // =========== MODAL ===========
 function openModal(id) {
   const p = PRODUCTS.find(x => x.id === id);
@@ -1531,7 +1534,7 @@ function openModal(id) {
   currentModalProduct = p;
   currentQty = 1;
   document.getElementById('qtyVal').textContent = 1;
-
+ 
   document.getElementById('modalImg').src = p.img;
   document.getElementById('modalImg').alt = p.name;
   document.getElementById('modalName').textContent = p.name;
@@ -1543,25 +1546,25 @@ function openModal(id) {
     ? `<span class="avail-in"><i class="fas fa-circle-check me-1"></i>En stock – Livraison disponible</span>`
     : `<span class="avail-out"><i class="fas fa-circle-xmark me-1"></i>Rupture de stock</span>`;
   document.getElementById('modalBadge').innerHTML = p.badge ? `<div class="product-badge ${p.badge}">${p.badge === 'promo' ? '🔥 Promo' : '✨ Nouveau'}</div>` : '';
-
+ 
   const msg = encodeURIComponent(`Bonjour NDANTA STORE 👋\n\nJe suis intéressé par :\n*${p.name}*\nPrix : ${formatPrice(p.price)}\n\nMerci de me confirmer la disponibilité.`);
-  document.getElementById('modalWA').href = `https://wa.me/224000000000?text=${msg}`;
-
+  document.getElementById('modalWA').href = `https://wa.me/224629823285?text=${msg}`;
+ 
   new bootstrap.Modal(document.getElementById('productModal')).show();
 }
-
+ 
 function changeQty(delta) {
   currentQty = Math.max(1, Math.min(10, currentQty + delta));
   document.getElementById('qtyVal').textContent = currentQty;
 }
-
+ 
 function addToCartFromModal() {
   if (!currentModalProduct) return;
   for (let i = 0; i < currentQty; i++) addToCart(currentModalProduct.id, true);
   bootstrap.Modal.getInstance(document.getElementById('productModal'))?.hide();
   showToast(`✅ ${currentQty}x ${currentModalProduct.name} ajouté au panier`, 'success');
 }
-
+ 
 // =========== CART ===========
 function addToCart(id, silent = false) {
   const p = PRODUCTS.find(x => x.id === id);
@@ -1573,26 +1576,26 @@ function addToCart(id, silent = false) {
   updateCartBadge();
   if (!silent) showToast(`✅ ${p.name} ajouté au panier`, 'success');
 }
-
+ 
 function removeFromCart(id) {
   cart = cart.filter(c => c.id !== id);
   saveCart(); updateCartBadge(); renderCart();
 }
-
+ 
 function clearCart() {
   cart = [];
   saveCart(); updateCartBadge(); renderCart();
 }
-
+ 
 function saveCart() {
   localStorage.setItem('ndanta_cart', JSON.stringify(cart));
 }
-
+ 
 function updateCartBadge() {
   const total = cart.reduce((s, c) => s + c.qty, 0);
   document.getElementById('cartBadge').textContent = total;
 }
-
+ 
 function toggleCart() {
   const sidebar = document.getElementById('cartSidebar');
   const overlay = document.getElementById('cartOverlay');
@@ -1600,7 +1603,7 @@ function toggleCart() {
   overlay.classList.toggle('active');
   renderCart();
 }
-
+ 
 function renderCart() {
   const container = document.getElementById('cartItems');
   const footer = document.getElementById('cartFooter');
@@ -1613,7 +1616,7 @@ function renderCart() {
   const total = cart.reduce((s, c) => s + c.price * c.qty, 0);
   document.getElementById('cartTotal').textContent = formatPrice(total);
   const msg = encodeURIComponent(`Bonjour NDANTA STORE 👋\n\nJe souhaite commander :\n${cart.map(c => `• ${c.name} x${c.qty} = ${formatPrice(c.price * c.qty)}`).join('\n')}\n\n*Total : ${formatPrice(total)}*\n\nMerci !`);
-  document.getElementById('cartWhatsapp').href = `https://wa.me/224000000000?text=${msg}`;
+  document.getElementById('cartWhatsapp').href = `https://wa.me/224629823285?text=${msg}`;
   container.innerHTML = cart.map(c => `
     <div class="cart-item">
       <img src="${c.img}" class="cart-item-img" alt="${c.name}" />
@@ -1625,25 +1628,25 @@ function renderCart() {
     </div>
   `).join('');
 }
-
+ 
 function buyNow(id) {
   const p = PRODUCTS.find(x => x.id === id);
   if (!p) return;
   const msg = encodeURIComponent(`Bonjour NDANTA STORE 👋\n\nJe veux commander :\n*${p.name}*\nPrix : ${formatPrice(p.price)}\n\nMerci !`);
-  window.open(`https://wa.me/224000000000?text=${msg}`, '_blank');
+  window.open(`https://wa.me/224629823285?text=${msg}`, '_blank');
 }
-
+ 
 function wishToggle(el) {
   const liked = el.textContent === '❤️';
   el.textContent = liked ? '🤍' : '❤️';
   showToast(liked ? '💔 Retiré des favoris' : '❤️ Ajouté aux favoris', liked ? '' : 'success');
 }
-
+ 
 // =========== CONTACT FORM ===========
 function sendMessage() {
   showToast('📩 Message envoyé ! Nous vous contacterons bientôt.', 'success');
 }
-
+ 
 // =========== TOAST ===========
 function showToast(msg, type = '') {
   const container = document.getElementById('toastContainer');
@@ -1653,7 +1656,7 @@ function showToast(msg, type = '') {
   container.appendChild(toast);
   setTimeout(() => { toast.style.opacity = '0'; toast.style.transform = 'translateX(30px)'; toast.style.transition = '0.3s'; setTimeout(() => toast.remove(), 300); }, 3000);
 }
-
+ 
 // =========== ADMIN ===========
 function openAdmin() {
   const pwd = prompt('🔒 Mot de passe administrateur :');
@@ -1663,14 +1666,14 @@ function openAdmin() {
     showToast('❌ Mot de passe incorrect', 'error');
   }
 }
-
+ 
 function showAdminTab(tab, el) {
   document.querySelectorAll('.admin-tab-content').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('admin' + tab.charAt(0).toUpperCase() + tab.slice(1)).classList.add('active');
   el.classList.add('active');
 }
-
+ 
 function populateAdminTable() {
   const tbody = document.getElementById('adminProductsTable');
   if (!tbody) return;
@@ -1688,19 +1691,19 @@ function populateAdminTable() {
     </tr>
   `).join('');
 }
-
+ 
 function showAddProductForm() { document.getElementById('addProductForm').style.display = 'block'; }
 function hideAddProductForm() { document.getElementById('addProductForm').style.display = 'none'; }
-
+ 
 function addProduct() {
   const name = document.getElementById('newName').value.trim();
   const price = parseInt(document.getElementById('newPrice').value);
   const cat = document.getElementById('newCat').value;
   const desc = document.getElementById('newDesc').value.trim();
   const img = document.getElementById('newImg').value.trim() || `https://placehold.co/400x400/1E5FD8/FFFFFF?text=${encodeURIComponent(name)}`;
-
+ 
   if (!name || !price) { showToast('⚠️ Veuillez remplir le nom et le prix', 'error'); return; }
-
+ 
   const catLabels = { phones: '📱 Téléphones', computers: '💻 Informatique', cameras: '📹 Caméras', accessories: '🔌 Accessoires', appliances: '🏠 Électroménager', fashion: '👕 Mode', misc: '🛒 Divers' };
   PRODUCTS.push({ id: Date.now(), name, cat, catLabel: catLabels[cat], price, oldPrice: null, desc, img, available: true, badge: 'new', popular: false, isNew: true });
   hideAddProductForm();
@@ -1708,11 +1711,11 @@ function addProduct() {
   renderProducts();
   showToast(`✅ ${name} ajouté avec succès`, 'success');
 }
-
+ 
 function editProduct(id) {
   showToast(`✏️ Mode édition pour le produit #${id} – Connecter le backend Flask`, '');
 }
-
+ 
 function deleteProduct(id) {
   if (!confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')) return;
   const idx = PRODUCTS.findIndex(p => p.id === id);
@@ -1721,18 +1724,19 @@ function deleteProduct(id) {
   renderProducts();
   showToast('🗑️ Produit supprimé', '');
 }
-
+ 
 // =========== INTERSECTION OBSERVER ===========
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
 }, { threshold: 0.1 });
-
+ 
 document.querySelectorAll('.why-card, .testimonial-card, .cat-card').forEach(el => {
   el.style.opacity = '0'; el.style.transform = 'translateY(30px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   revealObserver.observe(el);
 });
-
+ 
 </script>
 </body>
 </html>
+ 
