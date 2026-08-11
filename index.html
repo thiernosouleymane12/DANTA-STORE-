@@ -586,6 +586,68 @@ textarea.form-control-custom { resize: vertical; }
 .qty-control button:hover { border-color: var(--blue); color: var(--blue); }
 .qty-control span { font-family: var(--font-head); font-size: 18px; font-weight: 700; min-width: 24px; text-align: center; }
 
+/* ============ IMAGE PREVIEW ============ */
+.image-preview-container {
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.image-preview {
+  width: 100%;
+  max-width: 200px;
+  height: 150px;
+  border: 2px dashed var(--blue);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-light);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.image-preview.has-image {
+  border: 2px solid var(--blue);
+}
+
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.file-input-wrapper input[type=file] {
+  display: none;
+}
+
+.file-input-label {
+  display: block;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-light));
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.file-input-label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(30,95,216,0.35);
+}
+
+.admin-tab-content.active { display: block; }
+
 /* ============ ADMIN PANEL ============ */
 .admin-panel { border: none; border-radius: 20px; overflow: hidden; }
 .admin-header {
@@ -603,8 +665,6 @@ textarea.form-control-custom { resize: vertical; }
   border-radius: 0;
 }
 .admin-tab.active { color: var(--blue); border-bottom-color: var(--blue); }
-.admin-tab-content { display: none; }
-.admin-tab-content.active { display: block; }
 .stat-card {
   border-radius: 12px; padding: 20px; text-align: center;
   color: white;
@@ -711,7 +771,7 @@ textarea.form-control-custom { resize: vertical; }
           <input type="text" placeholder="Rechercher..." id="navSearch" />
           <i class="fas fa-search"></i>
         </div>
-        <a href="https://wa.me/224629823285" class="btn btn-whatsapp" target="_blank">
+        <a href="https://wa.me/224622919350" class="btn btn-whatsapp" target="_blank">
           <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
         <button class="btn btn-cart position-relative" onclick="toggleCart()">
@@ -734,7 +794,7 @@ textarea.form-control-custom { resize: vertical; }
       <a href="#produits" class="btn btn-primary-custom btn-lg">
         <i class="fas fa-shopping-bag me-2"></i>Commander maintenant
       </a>
-      <a href="https://wa.me/224629823285" class="btn btn-whatsapp-hero btn-lg" target="_blank">
+      <a href="https://wa.me/224622919350" class="btn btn-whatsapp-hero btn-lg" target="_blank">
         <i class="fab fa-whatsapp me-2"></i>Contacter sur WhatsApp
       </a>
     </div>
@@ -997,17 +1057,17 @@ textarea.form-control-custom { resize: vertical; }
     <div class="row g-4 align-items-start">
       <div class="col-lg-5">
         <div class="contact-info">
-          <a href="https://wa.me/224629823285" class="contact-item whatsapp-item" target="_blank">
+          <a href="https://wa.me/224622919350" class="contact-item whatsapp-item" target="_blank">
             <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-            <div><strong>WhatsApp</strong><br /><span>+224 000 00 00 00</span></div>
+            <div><strong>WhatsApp</strong><br /><span>+224 622 919 350</span></div>
           </a>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-phone"></i></div>
-            <div><strong>Téléphone</strong><br /><span>+224 000 00 00 00</span></div>
+            <div><strong>Téléphone</strong><br /><span>+224 622 919 350</span></div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-            <div><strong>Email</strong><br /><span>contact@ndantastore.com</span></div>
+            <div><strong>Email</strong><br /><span>ansartech026@gmail.com</span></div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -1126,7 +1186,7 @@ textarea.form-control-custom { resize: vertical; }
   </div>
   <div class="cart-footer" id="cartFooter" style="display:none">
     <div class="cart-total"><span>Total</span><strong id="cartTotal">0 GNF</strong></div>
-    <a href="https://wa.me/224629823285" class="btn btn-whatsapp w-100 mb-2" target="_blank" id="cartWhatsapp">
+    <a href="https://wa.me/224622919350" class="btn btn-whatsapp w-100 mb-2" target="_blank" id="cartWhatsapp">
       <i class="fab fa-whatsapp me-2"></i>Commander via WhatsApp
     </a>
     <button class="btn btn-outline-secondary w-100 btn-sm" onclick="clearCart()">Vider le panier</button>
@@ -1222,7 +1282,19 @@ textarea.form-control-custom { resize: vertical; }
                 </select>
               </div>
               <div class="col-md-8"><input type="text" class="form-control-custom" placeholder="Description" id="newDesc" /></div>
-              <div class="col-md-4"><input type="text" class="form-control-custom" placeholder="URL Image" id="newImg" /></div>
+              <div class="col-md-4">
+                <div class="image-preview" id="imagePreview">
+                  <span style="color: var(--gray-text); font-size: 12px;">Aperçu image</span>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="file-input-wrapper">
+                  <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)" />
+                  <label for="imageInput" class="file-input-label">
+                    <i class="fas fa-cloud-upload-alt me-2"></i>Charger une image depuis votre PC
+                  </label>
+                </div>
+              </div>
               <div class="col-12 d-flex gap-2">
                 <button class="btn btn-primary-custom btn-sm" onclick="addProduct()"><i class="fas fa-save me-1"></i>Enregistrer</button>
                 <button class="btn btn-outline-secondary btn-sm" onclick="hideAddProductForm()">Annuler</button>
@@ -1231,7 +1303,7 @@ textarea.form-control-custom { resize: vertical; }
           </div>
           <div class="admin-table-wrap">
             <table class="admin-table">
-              <thead><tr><th>ID</th><th>Nom</th><th>Catégorie</th><th>Prix</th><th>Stock</th><th>Actions</th></tr></thead>
+              <thead><tr><th>ID</th><th>Image</th><th>Nom</th><th>Catégorie</th><th>Prix</th><th>Stock</th><th>Actions</th></tr></thead>
               <tbody id="adminProductsTable"></tbody>
             </table>
           </div>
@@ -1318,9 +1390,11 @@ let currentView = 'grid';
 let visibleCount = 8;
 let currentModalProduct = null;
 let currentQty = 1;
+let currentImageBase64 = '';
 
 // =========== INIT ===========
 document.addEventListener('DOMContentLoaded', () => {
+  loadStoredProducts();
   initCanvas();
   renderProducts();
   updateCartBadge();
@@ -1334,6 +1408,28 @@ document.addEventListener('DOMContentLoaded', () => {
     searchProducts();
   });
 });
+
+// =========== IMAGE UPLOAD ===========
+function handleImageUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  
+  // Vérifier la taille du fichier (max 5MB)
+  if (file.size > 5 * 1024 * 1024) {
+    showToast('❌ Fichier trop volumineux (max 5MB)', 'error');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    currentImageBase64 = e.target.result;
+    const preview = document.getElementById('imagePreview');
+    preview.innerHTML = `<img src="${currentImageBase64}" alt="Preview" style="max-width: 100%; max-height: 100%; object-fit: contain;" />`;
+    preview.classList.add('has-image');
+    showToast('✅ Image chargée avec succès', 'success');
+  };
+  reader.readAsDataURL(file);
+}
 
 // =========== CANVAS PARTICLES ===========
 function initCanvas() {
@@ -1545,7 +1641,7 @@ function openModal(id) {
   document.getElementById('modalBadge').innerHTML = p.badge ? `<div class="product-badge ${p.badge}">${p.badge === 'promo' ? '🔥 Promo' : '✨ Nouveau'}</div>` : '';
 
   const msg = encodeURIComponent(`Bonjour NDANTA STORE 👋\n\nJe suis intéressé par :\n*${p.name}*\nPrix : ${formatPrice(p.price)}\n\nMerci de me confirmer la disponibilité.`);
-  document.getElementById('modalWA').href = `https://wa.me/224629823285?text=${msg}`;
+  document.getElementById('modalWA').href = `https://wa.me/224622919350?text=${msg}`;
 
   new bootstrap.Modal(document.getElementById('productModal')).show();
 }
@@ -1613,7 +1709,7 @@ function renderCart() {
   const total = cart.reduce((s, c) => s + c.price * c.qty, 0);
   document.getElementById('cartTotal').textContent = formatPrice(total);
   const msg = encodeURIComponent(`Bonjour NDANTA STORE 👋\n\nJe souhaite commander :\n${cart.map(c => `• ${c.name} x${c.qty} = ${formatPrice(c.price * c.qty)}`).join('\n')}\n\n*Total : ${formatPrice(total)}*\n\nMerci !`);
-  document.getElementById('cartWhatsapp').href = `https://wa.me/224629823285?text=${msg}`;
+  document.getElementById('cartWhatsapp').href = `https://wa.me/224622919350?text=${msg}`;
   container.innerHTML = cart.map(c => `
     <div class="cart-item">
       <img src="${c.img}" class="cart-item-img" alt="${c.name}" />
@@ -1630,7 +1726,7 @@ function buyNow(id) {
   const p = PRODUCTS.find(x => x.id === id);
   if (!p) return;
   const msg = encodeURIComponent(`Bonjour NDANTA STORE 👋\n\nJe veux commander :\n*${p.name}*\nPrix : ${formatPrice(p.price)}\n\nMerci !`);
-  window.open(`https://wa.me/224629823285?text=${msg}`, '_blank');
+  window.open(`https://wa.me/224622919350?text=${msg}`, '_blank');
 }
 
 function wishToggle(el) {
@@ -1652,6 +1748,23 @@ function showToast(msg, type = '') {
   toast.innerHTML = msg;
   container.appendChild(toast);
   setTimeout(() => { toast.style.opacity = '0'; toast.style.transform = 'translateX(30px)'; toast.style.transition = '0.3s'; setTimeout(() => toast.remove(), 300); }, 3000);
+}
+
+// =========== SAVE/LOAD PRODUCTS ===========
+function saveStoredProducts() {
+  localStorage.setItem('ndanta_products', JSON.stringify(PRODUCTS));
+}
+
+function loadStoredProducts() {
+  const stored = localStorage.getItem('ndanta_products');
+  if (stored) {
+    try {
+      const parsed = JSON.parse(stored);
+      PRODUCTS.splice(0, PRODUCTS.length, ...parsed);
+    } catch(e) {
+      console.error('Erreur lors du chargement des produits');
+    }
+  }
 }
 
 // =========== ADMIN ===========
@@ -1677,32 +1790,45 @@ function populateAdminTable() {
   tbody.innerHTML = PRODUCTS.map(p => `
     <tr>
       <td>#${p.id}</td>
+      <td><img src="${p.img}" style="width: 40px; height: 40px; object-fit: contain; border-radius: 6px;" alt="${p.name}" /></td>
       <td>${p.name}</td>
       <td>${p.catLabel}</td>
       <td>${formatPrice(p.price)}</td>
       <td>${p.available ? '<span class="badge-status green">En stock</span>' : '<span class="badge-status orange">Rupture</span>'}</td>
       <td>
-        <button class="btn btn-sm btn-outline-primary me-1" onclick="editProduct(${p.id})"><i class="fas fa-edit"></i></button>
+        <button class="btn btn-sm btn-outline-primary me-1" onclick="editProduct(${p.id})" title="Modifier l'image"><i class="fas fa-image"></i></button>
         <button class="btn btn-sm btn-outline-danger" onclick="deleteProduct(${p.id})"><i class="fas fa-trash"></i></button>
       </td>
     </tr>
   `).join('');
 }
 
-function showAddProductForm() { document.getElementById('addProductForm').style.display = 'block'; }
-function hideAddProductForm() { document.getElementById('addProductForm').style.display = 'none'; }
+function showAddProductForm() { 
+  document.getElementById('addProductForm').style.display = 'block';
+  currentImageBase64 = '';
+  document.getElementById('imagePreview').innerHTML = '<span style="color: var(--gray-text); font-size: 12px;">Aperçu image</span>';
+  document.getElementById('imagePreview').classList.remove('has-image');
+  document.getElementById('imageInput').value = '';
+}
+
+function hideAddProductForm() { 
+  document.getElementById('addProductForm').style.display = 'none';
+  currentImageBase64 = '';
+}
 
 function addProduct() {
   const name = document.getElementById('newName').value.trim();
   const price = parseInt(document.getElementById('newPrice').value);
   const cat = document.getElementById('newCat').value;
   const desc = document.getElementById('newDesc').value.trim();
-  const img = document.getElementById('newImg').value.trim() || `https://placehold.co/400x400/1E5FD8/FFFFFF?text=${encodeURIComponent(name)}`;
+  const img = currentImageBase64 || `https://placehold.co/400x400/1E5FD8/FFFFFF?text=${encodeURIComponent(name)}`;
 
   if (!name || !price) { showToast('⚠️ Veuillez remplir le nom et le prix', 'error'); return; }
 
   const catLabels = { phones: '📱 Téléphones', computers: '💻 Informatique', cameras: '📹 Caméras', accessories: '🔌 Accessoires', appliances: '🏠 Électroménager', fashion: '👕 Mode', misc: '🛒 Divers' };
   PRODUCTS.push({ id: Date.now(), name, cat, catLabel: catLabels[cat], price, oldPrice: null, desc, img, available: true, badge: 'new', popular: false, isNew: true });
+  
+  saveStoredProducts();
   hideAddProductForm();
   populateAdminTable();
   renderProducts();
@@ -1710,16 +1836,29 @@ function addProduct() {
 }
 
 function editProduct(id) {
-  showToast(`✏️ Mode édition pour le produit #${id} – Connecter le backend Flask`, '');
+  const product = PRODUCTS.find(p => p.id === id);
+  if (!product) return;
+  
+  const newImg = prompt('📷 Collez l\'URL de la nouvelle image ou laissez vide pour garder l\'actuelle :', product.img);
+  if (newImg !== null && newImg.trim()) {
+    product.img = newImg;
+    saveStoredProducts();
+    populateAdminTable();
+    renderProducts();
+    showToast('✅ Image du produit modifiée', 'success');
+  }
 }
 
 function deleteProduct(id) {
   if (!confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')) return;
   const idx = PRODUCTS.findIndex(p => p.id === id);
-  if (idx !== -1) PRODUCTS.splice(idx, 1);
-  populateAdminTable();
-  renderProducts();
-  showToast('🗑️ Produit supprimé', '');
+  if (idx !== -1) {
+    PRODUCTS.splice(idx, 1);
+    saveStoredProducts();
+    populateAdminTable();
+    renderProducts();
+    showToast('🗑️ Produit supprimé', '');
+  }
 }
 
 // =========== INTERSECTION OBSERVER ===========
